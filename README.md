@@ -65,13 +65,47 @@ Repositório: [https://github.com/heryckmp/ForumAluraChallenger](https://github.
 | **[POST](#)**   | `http://localhost:8080/api/login`                  | Faz login para receber JWT                   |
 | **[POST](#)**   | `http://localhost:8080/api/register`               | Cadastra um novo usuário                     |
 
+### Endpoints adicionados nas melhorias
+
+| Method          | URL                                                | Result                                       |
+|-----------------|----------------------------------------------------|----------------------------------------------|
+| **[GET](#)**    | `http://localhost:8080/topics/filter`              | Busca tópicos com filtros combinados         |
+| **[GET](#)**    | `http://localhost:8080/topics/search?title=texto`  | Busca tópicos por título                     |
+| **[GET](#)**    | `http://localhost:8080/topics/category/{id}`       | Busca tópicos por categoria                  |
+| **[GET](#)**    | `http://localhost:8080/topics/course/{id}`         | Busca tópicos por curso                      |
+| **[GET](#)**    | `http://localhost:8080/topics/status/{status}`     | Busca tópicos por status                     |
+| **[GET](#)**    | `http://localhost:8080/topics/date-range`          | Busca tópicos por período de data            |
+
+### Melhorias implementadas
+
+1. **Documentação da API com Swagger/OpenAPI**
+   - Documentação completa dos endpoints
+   - Interface interativa para teste da API
+   - Acesse em: `http://localhost:8080/swagger-ui.html`
+
+2. **Tratamento de erros aprimorado**
+   - Mensagens de erro mais descritivas e padronizadas
+   - Tratamento de exceções específicas
+   - Respostas de erro com mais informações
+
+3. **Busca avançada com filtros**
+   - Filtros por título, categoria, curso e status
+   - Filtros por período de data
+   - Combinação de múltiplos filtros em uma única consulta
+
+4. **Atualização para Java 21**
+   - Migração de Java 17 para Java 21
+   - Atualização do Spring Boot para versão 3.2.3
+   - Habilitação de recursos de preview do Java 21
+   - Melhor desempenho e suporte a recursos modernos da linguagem
+
 <br>
 
 ### Tecnologias utilizadas
 
-- Linguagem: Java
+- Linguagem: Java 21
 - IDE: <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>
-- Framework: Spring
+- Framework: Spring Boot 3.2.3
 - Spring Data JPA, Spring Boot Starter Web, Mysql, Flyway, Lombok, Spring Validation, Spring Boot
   Security, <a href="https://github.com/auth0/java-jwt">java-jwt</a>
 

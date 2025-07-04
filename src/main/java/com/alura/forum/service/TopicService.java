@@ -1,6 +1,7 @@
 package com.alura.forum.service;
 
 import com.alura.forum.core.crud.CrudService;
+import com.alura.forum.model.dto.request.TopicFilterDTO;
 import com.alura.forum.model.entity.Answer;
 import com.alura.forum.model.entity.Topic;
 import com.alura.forum.model.entity.User;
@@ -47,6 +48,38 @@ public class TopicService extends CrudService<Topic, Long> {
     public Page<TopicSlimDTO> findAllSlim(Pageable pageable) {
         return topicRepository.findAllBy(pageable);
     }
+    
+    public Page<Topic> findByFilters(TopicFilterDTO filters, Pageable pageable) {
+        return topicRepository.findByFilters(
+                filters.getTitle(),
+                filters.getCategoryId(),
+                filters.getCourseId(),
+                filters.getStatus(),
+                filters.getStartDate(),
+                filters.getEndDate(),
+                pageable
+        );
+    }
+    
+    public Page<TopicSlimDTO> findByTitle(String title, Pageable pageable) {
+        return topicRepository.findByTitleContainingIgnoreCase(title, pageable);
+    }
+    
+    public Page<TopicSlimDTO> findByCategory(Long categoryId, Pageable pageable) {
+        return topicRepository.findByCategoryId(categoryId, pageable);
+    }
+    
+    public Page<TopicSlimDTO> findByCourse(Long courseId, Pageable pageable) {
+        return topicRepository.findByCourseId(courseId, pageable);
+    }
+    
+    public Page<TopicSlimDTO> findByStatus(TopicStatus status, Pageable pageable) {
+        return topicRepository.findByStatus(status, pageable);
+    }
+    
+    public Page<TopicSlimDTO> findByDateRange(LocalDateTime start, LocalDateTime end, Pageable pageable) {
+        return topicRepository.findByCreatedAtBetween(start, end, pageable);
+    }
 
     public TopicCompleteDTO findComplete(Long id) {
         return topicRepository.findTopicCompleteById(id)
@@ -70,5 +103,4 @@ public class TopicService extends CrudService<Topic, Long> {
         if (!existsById(id)) throw new EntityNotFoundException("Topic with id " + id + " not exist!");
         return getReferenceById(id);
     }
-
 }

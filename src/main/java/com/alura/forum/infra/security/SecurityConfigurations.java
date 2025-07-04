@@ -29,6 +29,7 @@ public class SecurityConfigurations {
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> {
                             req.requestMatchers(HttpMethod.POST, "/api/**").permitAll();
+                            req.requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll();
                             req.requestMatchers(HttpMethod.POST, "/**").authenticated();
                             req.requestMatchers(HttpMethod.PUT, "/**").authenticated();
                             req.requestMatchers(HttpMethod.DELETE, "/**").authenticated();
