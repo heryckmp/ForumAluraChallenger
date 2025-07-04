@@ -5,6 +5,7 @@
 <div align=center>
 
 <img height="80" margin="10" src="https://i.imgur.com/9Gq6RS0.png">
+<p>Repositório: <a href="https://github.com/heryckmp/ForumAluraChallenger">https://github.com/heryckmp/ForumAluraChallenger</a></p>
 </div>
 
 ### Sprint 01: Implementando uma API Rest com Spring
@@ -45,9 +46,7 @@ Ao final de nosso processo teremos uma API REST com as seguintes funcionalidades
 
 ## Resultado
 
-
-https://github.com/heryckmp/Challenge-Oracle-ONE-forum-alura/assets/Erick Moreira/2236901e-b872-4fde-9afd-018516d9f4ba
-
+Repositório: [https://github.com/heryckmp/ForumAluraChallenger](https://github.com/heryckmp/ForumAluraChallenger)
 
 <img src="https://i.imgur.com/AEavqEN.png">
 
