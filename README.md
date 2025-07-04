@@ -5,7 +5,6 @@
 <div align=center>
 
 <img height="80" margin="10" src="https://i.imgur.com/9Gq6RS0.png">
-<p>Repositório: <a href="https://github.com/heryckmp/ForumAluraChallenger">https://github.com/heryckmp/ForumAluraChallenger</a></p>
 </div>
 
 ### Sprint 01: Implementando uma API Rest com Spring
@@ -45,8 +44,6 @@ Ao final de nosso processo teremos uma API REST com as seguintes funcionalidades
 <br>
 
 ## Resultado
-
-Repositório: [https://github.com/heryckmp/ForumAluraChallenger](https://github.com/heryckmp/ForumAluraChallenger)
 
 <img src="https://i.imgur.com/AEavqEN.png">
 
@@ -93,19 +90,13 @@ Repositório: [https://github.com/heryckmp/ForumAluraChallenger](https://github.
    - Filtros por período de data
    - Combinação de múltiplos filtros em uma única consulta
 
-4. **Atualização para Java 21**
-   - Migração de Java 17 para Java 21
-   - Atualização do Spring Boot para versão 3.2.3
-   - Habilitação de recursos de preview do Java 21
-   - Melhor desempenho e suporte a recursos modernos da linguagem
-
 <br>
 
 ### Tecnologias utilizadas
 
-- Linguagem: Java 21
+- Linguagem: Java
 - IDE: <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>
-- Framework: Spring Boot 3.2.3
+- Framework: Spring
 - Spring Data JPA, Spring Boot Starter Web, Mysql, Flyway, Lombok, Spring Validation, Spring Boot
   Security, <a href="https://github.com/auth0/java-jwt">java-jwt</a>
 
